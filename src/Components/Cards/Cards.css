@@ -2,6 +2,9 @@
     height: 80%;
     z-index: 1;
 }
+.height-cards-front:hover{
+    background-color: hsl(235, 45%, 61%);
+}
 
 .divCards{
     position: relative;
@@ -16,4 +19,8 @@
 
 .titre-cards{
     font-size: 60px;
+}
+
+.dot:hover{
+    color: white;
 }
