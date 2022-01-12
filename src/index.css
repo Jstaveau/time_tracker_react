@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bg-bleu{
+  height: 100vh;
+  background-color: hsl(226, 43%, 10%);
+}
