@@ -1,0 +1,32 @@
+.bg-bleu-fonce{
+    background-color: hsl(235, 46%, 20%);
+}
+
+.bg-bleu-clair{
+    background-color: hsl(246, 80%, 60%);
+}
+
+.arrondi{
+    border-radius: 20px;
+}
+
+.heith-66{
+    height: 66%;
+}
+
+.height-33{
+    height: 33%;
+}
+
+.text-desat{
+    color: hsl(236, 100%, 87%);
+}
+
+.curseur-pointeur{
+    cursor: pointer;
+}
+
+.boutons:hover, .boutonsClick{
+    color: white;
+    font-weight: 400;
+}
