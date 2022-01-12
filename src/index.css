@@ -21,6 +21,12 @@ code {
   height: 500px;
 }
 
+@media screen and (max-width : 700px) and (min-width :0px) {
+  .App{
+    min-height: 1500px;
+  }
+}
+
 .height-cards{
-  height: 47%;
+  height: 48%;
 }

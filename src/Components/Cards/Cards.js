@@ -2,7 +2,7 @@ import './Cards.css'
 
 export default function Cards(props) {
     return (
-        <div className={'divCards arrondi w-100 ms-4 d-flex flex-column justify-content-end' + props.bg}>
+        <div className={'divCards arrondi w-100 ms-3 d-flex flex-column justify-content-end' + props.bg}>
             {props.img}
             <div className={'text-light height-cards-front w-100 bg-bleu-fonce arrondi'}>
                 <div className='d-flex justify-content-between align-items-center mx-4 my-2'>

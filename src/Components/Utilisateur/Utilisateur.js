@@ -20,7 +20,7 @@ export default function Utilisateur() {
         });
         e.classList.add('boutonsClick')
     }
-    
+
     const [multiplicateur, setMultiplicateur] = useState(32)
     const [lastPeriod, setLastPeriod] = useState(36)
     const [periode, setPeriode] = useState('Week')
@@ -42,26 +42,28 @@ export default function Utilisateur() {
     }
 
     return (
-        <section className="height-section d-flex justify-content-center align-items-center col-8 m-auto">
-            <div className='bg-bleu-fonce arrondi col-3 h-100 mx-1'>
-            <div className="bg-bleu-clair arrondi w-100 heith-66">
+        <section className="height-section d-flex flex-md-row flex-column justify-content-center align-items-center col-8 m-auto">
+            <div className='bg-bleu-fonce arrondi col-10 col-md-3 h-100 mx-md-1 mt-3 mt-md-0 mb-2 mb-md-0'>
+            <div className="bg-bleu-clair d-flex flex-md-column align-items-md-start align-items-center arrondi w-100 heith-66">
                 <img src={imgJeremy} alt="pp de Jeremy" className='col-4 m-4 rounded-circle border border-light border-3'/>
-                <p className='ms-4 text-desat mb-0'>Report for</p>
-                <h2 className='ms-4 text-light fs-1 fw-light mt-0'>Jeremy <br /> Robson</h2>
+                <div>
+                    <p className='ms-4 text-desat mb-0'>Report for</p>
+                    <h2 className='ms-4 text-light fs-1 fw-light mt-0'>Jeremy <br /> Robson</h2>
+                </div>
             </div>
-            <div onClick={(e) => changeActive(e.target)} className='height-33 d-flex flex-column justify-content-center w-100'>
-                <p className='boutons curseur-pointeur ms-4 text-desat' onClick={changeValeurDay}>Daily</p>
+            <div onClick={(e) => changeActive(e.target)} className='height-33 d-flex flex-md-column justify-content-center mt-3 mt-md-0 w-100'>
+                <p className='boutons curseur-pointeur ms-md-4 text-desat' onClick={changeValeurDay}>Daily</p>
                 <p className='boutonsClick boutons curseur-pointeur ms-4 text-desat' onClick={changeValeurWeek}>Weekly</p>
                 <p className='boutons curseur-pointeur ms-4 text-desat' onClick={changeValeurMonth}>Monthly</p>
             </div>
         </div>
             <div className='col-10 h-100 d-flex flex-column justify-content-between'>
-                <div className='height-cards d-flex justify-content-center'>
+                <div className='height-cards d-flex flex-column flex-md-row justify-content-center'>
                     <Cards img={imgWork} sujet={'Work'} bg={' bg-work'} periode={periode} tempsActu={multiplicateur} tempsAv={lastPeriod}/>
                     <Cards img={imgPlay} sujet={'Play'} bg={' bg-play'} periode={periode} tempsActu={Math.round(multiplicateur/3)} tempsAv={Math.round(lastPeriod/3)}/>
                     <Cards img={imgStudy} sujet={'Study'} bg={' bg-study'} periode={periode} tempsActu={Math.round(multiplicateur/6)} tempsAv={Math.round(lastPeriod/6)}/>
                 </div>
-                <div className='height-cards d-flex justify-content-center'>
+                <div className='height-cards d-flex flex-column flex-md-row  justify-content-center'>
                     <Cards img={imgExo} sujet={'Exercise'} bg={' bg-exo'} periode={periode} tempsActu={Math.round(multiplicateur/6)} tempsAv={Math.round(lastPeriod/6)}/>
                     <Cards img={imgSocial} sujet={'Social'} bg={' bg-social'} periode={periode} tempsActu={Math.round(multiplicateur/5)} tempsAv={Math.round(lastPeriod/5)}/>
                     <Cards img={imgCare} sujet={'Self Care'} bg={' bg-care'} periode={periode} tempsActu={Math.round(multiplicateur/7)} tempsAv={Math.round(lastPeriod/7)}/>
